@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		B7B371C62B3E66BA00D81D07 /* RecordingTodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B371C52B3E66BA00D81D07 /* RecordingTodoAppApp.swift */; };
-		B7B371C82B3E66BA00D81D07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B371C72B3E66BA00D81D07 /* ContentView.swift */; };
-		B7B371CA2B3E66BB00D81D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B371C92B3E66BB00D81D07 /* Assets.xcassets */; };
 		B7B371CD2B3E66BB00D81D07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B371CC2B3E66BB00D81D07 /* Preview Assets.xcassets */; };
 		B7B371D72B3E66BB00D81D07 /* RecordingTodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B371D62B3E66BB00D81D07 /* RecordingTodoAppTests.swift */; };
 		B7B371E12B3E66BB00D81D07 /* RecordingTodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B371E02B3E66BB00D81D07 /* RecordingTodoAppUITests.swift */; };
 		B7B371E32B3E66BB00D81D07 /* RecordingTodoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B371E22B3E66BB00D81D07 /* RecordingTodoAppUITestsLaunchTests.swift */; };
+		B7B371F62B3E6FDE00D81D07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B371F52B3E6FDE00D81D07 /* LaunchScreen.storyboard */; };
+		B7B371FF2B3E751200D81D07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B371FE2B3E751100D81D07 /* Assets.xcassets */; };
+		B7B372012B3EA18300D81D07 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372002B3EA18300D81D07 /* LaunchViewController.swift */; };
+		B7B372052B3EA5A000D81D07 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372042B3EA5A000D81D07 /* Color+Extensions.swift */; };
+		B7B372092B3EA6BC00D81D07 /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372082B3EA6BC00D81D07 /* OnboardingContent.swift */; };
+		B7B3720C2B3EA70800D81D07 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3720B2B3EA70800D81D07 /* OnboardingViewModel.swift */; };
+		B7B3720E2B3EA70E00D81D07 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3720D2B3EA70E00D81D07 /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +41,19 @@
 /* Begin PBXFileReference section */
 		B7B371C22B3E66BA00D81D07 /* RecordingTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordingTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B371C52B3E66BA00D81D07 /* RecordingTodoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingTodoAppApp.swift; sourceTree = "<group>"; };
-		B7B371C72B3E66BA00D81D07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B7B371C92B3E66BB00D81D07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7B371CC2B3E66BB00D81D07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B7B371D22B3E66BB00D81D07 /* RecordingTodoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordingTodoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B371D62B3E66BB00D81D07 /* RecordingTodoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingTodoAppTests.swift; sourceTree = "<group>"; };
 		B7B371DC2B3E66BB00D81D07 /* RecordingTodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecordingTodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B371E02B3E66BB00D81D07 /* RecordingTodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingTodoAppUITests.swift; sourceTree = "<group>"; };
 		B7B371E22B3E66BB00D81D07 /* RecordingTodoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingTodoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7B371F52B3E6FDE00D81D07 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7B371FE2B3E751100D81D07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7B372002B3EA18300D81D07 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		B7B372042B3EA5A000D81D07 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		B7B372082B3EA6BC00D81D07 /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
+		B7B3720B2B3EA70800D81D07 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		B7B3720D2B3EA70E00D81D07 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +104,12 @@
 		B7B371C42B3E66BA00D81D07 /* RecordingTodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B7B3720A2B3EA6FD00D81D07 /* Feature */,
+				B7B372062B3EA6A900D81D07 /* Model */,
+				B7B372022B3EA57F00D81D07 /* Core */,
+				B7B371FD2B3E73FA00D81D07 /* App */,
 				B7B371C52B3E66BA00D81D07 /* RecordingTodoAppApp.swift */,
-				B7B371C72B3E66BA00D81D07 /* ContentView.swift */,
-				B7B371C92B3E66BB00D81D07 /* Assets.xcassets */,
+				B7B371FE2B3E751100D81D07 /* Assets.xcassets */,
 				B7B371CB2B3E66BB00D81D07 /* Preview Content */,
 			);
 			path = RecordingTodoApp;
@@ -125,6 +138,64 @@
 				B7B371E22B3E66BB00D81D07 /* RecordingTodoAppUITestsLaunchTests.swift */,
 			);
 			path = RecordingTodoAppUITests;
+			sourceTree = "<group>";
+		};
+		B7B371FD2B3E73FA00D81D07 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B7B371F52B3E6FDE00D81D07 /* LaunchScreen.storyboard */,
+				B7B372002B3EA18300D81D07 /* LaunchViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B7B372022B3EA57F00D81D07 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B7B372032B3EA58600D81D07 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B7B372032B3EA58600D81D07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7B372042B3EA5A000D81D07 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B7B372062B3EA6A900D81D07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7B372072B3EA6AE00D81D07 /* Onboarding */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7B372072B3EA6AE00D81D07 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B7B372082B3EA6BC00D81D07 /* OnboardingContent.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B7B3720A2B3EA6FD00D81D07 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B7B3720F2B3EA71300D81D07 /* Onboarding */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		B7B3720F2B3EA71300D81D07 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B7B3720B2B3EA70800D81D07 /* OnboardingViewModel.swift */,
+				B7B3720D2B3EA70E00D81D07 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7B371F62B3E6FDE00D81D07 /* LaunchScreen.storyboard in Resources */,
 				B7B371CD2B3E66BB00D81D07 /* Preview Assets.xcassets in Resources */,
-				B7B371CA2B3E66BB00D81D07 /* Assets.xcassets in Resources */,
+				B7B371FF2B3E751200D81D07 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B371C82B3E66BA00D81D07 /* ContentView.swift in Sources */,
+				B7B3720C2B3EA70800D81D07 /* OnboardingViewModel.swift in Sources */,
+				B7B372092B3EA6BC00D81D07 /* OnboardingContent.swift in Sources */,
+				B7B372012B3EA18300D81D07 /* LaunchViewController.swift in Sources */,
 				B7B371C62B3E66BA00D81D07 /* RecordingTodoAppApp.swift in Sources */,
+				B7B372052B3EA5A000D81D07 /* Color+Extensions.swift in Sources */,
+				B7B3720E2B3EA70E00D81D07 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +423,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -404,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -419,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecordingTodoApp/Preview Content\"";
@@ -427,9 +504,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecordingTodoApp/Preview Content\"";
@@ -456,9 +535,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
