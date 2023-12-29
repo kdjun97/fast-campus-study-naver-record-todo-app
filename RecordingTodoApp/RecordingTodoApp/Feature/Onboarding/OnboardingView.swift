@@ -10,7 +10,39 @@ import SwiftUI
 
 struct OnboardingView: View {
     @StateObject private var onBoardingViewModel = OnboardingViewModel()
-    @State private var selectedIndex: Int = 0
+    @StateObject private var pathModel = PathModel()
+    
+    var body: some View {
+        NavigationStack(path: $pathModel.paths) {
+            OnboardingContentView(onBoardingViewModel: onBoardingViewModel)
+                .navigationDestination(
+                    for: PathType.self,
+                    destination: { pathType in
+                        switch(pathType) {
+                        case .homeView:
+                            HomeView()
+                                .navigationBarBackButtonHidden(true)
+                        case .todoView:
+                            TodoView()
+                                .navigationBarBackButtonHidden(true)
+                        case .memoView:
+                            MemoView()
+                                .navigationBarBackButtonHidden(true)
+                        }
+                    }
+                )
+        }.environmentObject(pathModel)
+    }
+}
+
+fileprivate struct OnboardingContentView: View {
+    @ObservedObject private var onBoardingViewModel: OnboardingViewModel
+    @State private var selectedIndex: Int
+    
+    init(onBoardingViewModel: OnboardingViewModel, selectedIndex: Int = 0) {
+        self.onBoardingViewModel = onBoardingViewModel
+        self.selectedIndex = selectedIndex
+    }
     
     var body: some View {
         VStack {
@@ -64,9 +96,11 @@ fileprivate struct OnboardingCellView: View {
 }
 
 private struct StartButton: View {
+    @EnvironmentObject private var pathModel: PathModel
+    
     var body: some View {
         Button {
-            print("go")
+            pathModel.paths.append(.homeView)
         } label: {
             HStack(spacing: 0) {
                 Text("시작하기")
