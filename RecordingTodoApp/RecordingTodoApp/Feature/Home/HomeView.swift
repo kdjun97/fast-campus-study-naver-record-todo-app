@@ -11,11 +11,14 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject private var pathModel: PathModel
     @StateObject private var homeViewModel = HomeViewModel()
+    @EnvironmentObject private var todoListViewModel: TodoListViewModel
     
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $homeViewModel.selectedTab) {
-                TodoView()
+                TodoListView()
+                    .environmentObject(pathModel)
+                    .environmentObject(todoListViewModel)
                     .tag(Tab.todoList)
                 MemoView()
                     .tag(Tab.memo)
