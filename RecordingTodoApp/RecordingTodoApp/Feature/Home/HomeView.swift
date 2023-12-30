@@ -12,6 +12,7 @@ struct HomeView: View {
     @EnvironmentObject private var pathModel: PathModel
     @StateObject private var homeViewModel = HomeViewModel()
     @EnvironmentObject private var todoListViewModel: TodoListViewModel
+    @EnvironmentObject private var memoListViewModel: MemoListViewModel
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -20,7 +21,9 @@ struct HomeView: View {
                     .environmentObject(pathModel)
                     .environmentObject(todoListViewModel)
                     .tag(Tab.todoList)
-                MemoView()
+                MemoListView()
+                    .environmentObject(pathModel)
+                    .environmentObject(memoListViewModel)
                     .tag(Tab.memo)
                 VoiceRecorderView()
                     .tag(Tab.voiceRecorder)
