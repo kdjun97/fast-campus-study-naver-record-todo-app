@@ -29,7 +29,7 @@
 		B7B372272B3EE12C00D81D07 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372262B3EE12C00D81D07 /* SettingView.swift */; };
 		B7B372292B3EE14200D81D07 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372282B3EE14200D81D07 /* TimerView.swift */; };
 		B7B3722B2B3EE15400D81D07 /* VoiceRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3722A2B3EE15400D81D07 /* VoiceRecorderView.swift */; };
-		B7B3722D2B3FD7CE00D81D07 /* Date_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3722C2B3FD7CE00D81D07 /* Date_Extensions.swift */; };
+		B7B3722D2B3FD7CE00D81D07 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3722C2B3FD7CE00D81D07 /* Date+Extensions.swift */; };
 		B7B372312B3FD95700D81D07 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372302B3FD95700D81D07 /* CustomNavigationBar.swift */; };
 		B7B372342B3FDDB600D81D07 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372332B3FDDB600D81D07 /* Todo.swift */; };
 		B7B372362B3FDE4200D81D07 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372352B3FDE4200D81D07 /* TodoViewModel.swift */; };
@@ -39,6 +39,8 @@
 		B7B3723F2B40404D00D81D07 /* MemoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3723E2B40404D00D81D07 /* MemoListViewModel.swift */; };
 		B7B372422B40405C00D81D07 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372412B40405C00D81D07 /* MemoViewModel.swift */; };
 		B7B372452B40413900D81D07 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372442B40413900D81D07 /* Memo.swift */; };
+		B7B372472B41592500D81D07 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372462B41592500D81D07 /* Double+Extensions.swift */; };
+		B7B372492B41597200D81D07 /* VoiceRecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372482B41597200D81D07 /* VoiceRecorderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +86,7 @@
 		B7B372262B3EE12C00D81D07 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		B7B372282B3EE14200D81D07 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		B7B3722A2B3EE15400D81D07 /* VoiceRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorderView.swift; sourceTree = "<group>"; };
-		B7B3722C2B3FD7CE00D81D07 /* Date_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_Extensions.swift; sourceTree = "<group>"; };
+		B7B3722C2B3FD7CE00D81D07 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		B7B372302B3FD95700D81D07 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		B7B372332B3FDDB600D81D07 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		B7B372352B3FDE4200D81D07 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 		B7B3723E2B40404D00D81D07 /* MemoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewModel.swift; sourceTree = "<group>"; };
 		B7B372412B40405C00D81D07 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
 		B7B372442B40413900D81D07 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		B7B372462B41592500D81D07 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		B7B372482B41597200D81D07 /* VoiceRecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				B7B372042B3EA5A000D81D07 /* Color+Extensions.swift */,
-				B7B3722C2B3FD7CE00D81D07 /* Date_Extensions.swift */,
+				B7B3722C2B3FD7CE00D81D07 /* Date+Extensions.swift */,
+				B7B372462B41592500D81D07 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				B7B3722A2B3EE15400D81D07 /* VoiceRecorderView.swift */,
+				B7B372482B41597200D81D07 /* VoiceRecorderViewModel.swift */,
 			);
 			path = VoiceRecorder;
 			sourceTree = "<group>";
@@ -504,7 +510,8 @@
 				B7B3723B2B3FDEB800D81D07 /* TodoListViewModel.swift in Sources */,
 				B7B372292B3EE14200D81D07 /* TimerView.swift in Sources */,
 				B7B372422B40405C00D81D07 /* MemoViewModel.swift in Sources */,
-				B7B3722D2B3FD7CE00D81D07 /* Date_Extensions.swift in Sources */,
+				B7B372472B41592500D81D07 /* Double+Extensions.swift in Sources */,
+				B7B3722D2B3FD7CE00D81D07 /* Date+Extensions.swift in Sources */,
 				B7B372172B3ED73200D81D07 /* HomeView.swift in Sources */,
 				B7B372142B3ED5FD00D81D07 /* PathType.swift in Sources */,
 				B7B3721A2B3ED76A00D81D07 /* TodoView.swift in Sources */,
@@ -515,6 +522,7 @@
 				B7B372342B3FDDB600D81D07 /* Todo.swift in Sources */,
 				B7B372362B3FDE4200D81D07 /* TodoViewModel.swift in Sources */,
 				B7B372122B3ED5F500D81D07 /* Path.swift in Sources */,
+				B7B372492B41597200D81D07 /* VoiceRecorderViewModel.swift in Sources */,
 				B7B372092B3EA6BC00D81D07 /* OnboardingContent.swift in Sources */,
 				B7B372392B3FDEB100D81D07 /* TodoListView.swift in Sources */,
 				B7B372012B3EA18300D81D07 /* LaunchViewController.swift in Sources */,
@@ -696,6 +704,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7Z8W92S6YL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성 녹음시 마이크 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -731,6 +740,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7Z8W92S6YL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성 녹음시 마이크 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
