@@ -44,6 +44,8 @@
 		B7B372452B40413900D81D07 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372442B40413900D81D07 /* Memo.swift */; };
 		B7B372472B41592500D81D07 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372462B41592500D81D07 /* Double+Extensions.swift */; };
 		B7B372492B41597200D81D07 /* VoiceRecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B372482B41597200D81D07 /* VoiceRecorderViewModel.swift */; };
+		B7D5DA552B52B1D500C7357E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DA542B52B1D500C7357E /* NotificationService.swift */; };
+		B7D5DA572B52CA2900C7357E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DA562B52CA2900C7357E /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		B7B372442B40413900D81D07 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		B7B372462B41592500D81D07 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		B7B372482B41597200D81D07 /* VoiceRecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorderViewModel.swift; sourceTree = "<group>"; };
+		B7D5DA542B52B1D500C7357E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		B7D5DA562B52CA2900C7357E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 			children = (
 				B7B371F52B3E6FDE00D81D07 /* LaunchScreen.storyboard */,
 				B7B372002B3EA18300D81D07 /* LaunchViewController.swift */,
+				B7D5DA562B52CA2900C7357E /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 		B7B372022B3EA57F00D81D07 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B7D5DA532B52B1C600C7357E /* Service */,
 				B7B372032B3EA58600D81D07 /* Extensions */,
 			);
 			path = Core;
@@ -393,6 +399,14 @@
 			path = Memo;
 			sourceTree = "<group>";
 		};
+		B7D5DA532B52B1C600C7357E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B7D5DA542B52B1D500C7357E /* NotificationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7D5DA572B52CA2900C7357E /* AppDelegate.swift in Sources */,
 				B7B3723B2B3FDEB800D81D07 /* TodoListViewModel.swift in Sources */,
 				B7B372292B3EE14200D81D07 /* TimerView.swift in Sources */,
 				B7B372422B40405C00D81D07 /* MemoViewModel.swift in Sources */,
@@ -536,6 +551,7 @@
 				B75BE4252B529AA70072D29F /* Int+Extensions.swift in Sources */,
 				B7B372272B3EE12C00D81D07 /* SettingView.swift in Sources */,
 				B7B3723F2B40404D00D81D07 /* MemoListViewModel.swift in Sources */,
+				B7D5DA552B52B1D500C7357E /* NotificationService.swift in Sources */,
 				B7B3720C2B3EA70800D81D07 /* OnboardingViewModel.swift in Sources */,
 				B7B372342B3FDDB600D81D07 /* Todo.swift in Sources */,
 				B75BE4232B5294800072D29F /* Timer.swift in Sources */,
