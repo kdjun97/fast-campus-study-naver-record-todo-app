@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75BE4232B5294800072D29F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75BE4222B5294800072D29F /* Timer.swift */; };
+		B75BE4252B529AA70072D29F /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75BE4242B529AA70072D29F /* Int+Extensions.swift */; };
+		B75BE4272B529B940072D29F /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75BE4262B529B940072D29F /* TimerViewModel.swift */; };
 		B7B371C62B3E66BA00D81D07 /* RecordingTodoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B371C52B3E66BA00D81D07 /* RecordingTodoAppApp.swift */; };
 		B7B371CD2B3E66BB00D81D07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B371CC2B3E66BB00D81D07 /* Preview Assets.xcassets */; };
 		B7B371D72B3E66BB00D81D07 /* RecordingTodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B371D62B3E66BB00D81D07 /* RecordingTodoAppTests.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B75BE4222B5294800072D29F /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		B75BE4242B529AA70072D29F /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		B75BE4262B529B940072D29F /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		B7B371C22B3E66BA00D81D07 /* RecordingTodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordingTodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B371C52B3E66BA00D81D07 /* RecordingTodoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingTodoAppApp.swift; sourceTree = "<group>"; };
 		B7B371CC2B3E66BB00D81D07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -125,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B75BE4212B5294770072D29F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B75BE4222B5294800072D29F /* Timer.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		B7B371B92B3E66BA00D81D07 = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +222,7 @@
 				B7B372042B3EA5A000D81D07 /* Color+Extensions.swift */,
 				B7B3722C2B3FD7CE00D81D07 /* Date+Extensions.swift */,
 				B7B372462B41592500D81D07 /* Double+Extensions.swift */,
+				B75BE4242B529AA70072D29F /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,6 +230,7 @@
 		B7B372062B3EA6A900D81D07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B75BE4212B5294770072D29F /* Timer */,
 				B7B372432B40413300D81D07 /* Memo */,
 				B7B372322B3FDDA900D81D07 /* Todo */,
 				B7B372202B3EDFDA00D81D07 /* Home */,
@@ -314,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				B7B372282B3EE14200D81D07 /* TimerView.swift */,
+				B75BE4262B529B940072D29F /* TimerViewModel.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -516,10 +533,12 @@
 				B7B372142B3ED5FD00D81D07 /* PathType.swift in Sources */,
 				B7B3721A2B3ED76A00D81D07 /* TodoView.swift in Sources */,
 				B7B3723D2B40404500D81D07 /* MemoListView.swift in Sources */,
+				B75BE4252B529AA70072D29F /* Int+Extensions.swift in Sources */,
 				B7B372272B3EE12C00D81D07 /* SettingView.swift in Sources */,
 				B7B3723F2B40404D00D81D07 /* MemoListViewModel.swift in Sources */,
 				B7B3720C2B3EA70800D81D07 /* OnboardingViewModel.swift in Sources */,
 				B7B372342B3FDDB600D81D07 /* Todo.swift in Sources */,
+				B75BE4232B5294800072D29F /* Timer.swift in Sources */,
 				B7B372362B3FDE4200D81D07 /* TodoViewModel.swift in Sources */,
 				B7B372122B3ED5F500D81D07 /* Path.swift in Sources */,
 				B7B372492B41597200D81D07 /* VoiceRecorderViewModel.swift in Sources */,
@@ -534,6 +553,7 @@
 				B7B372052B3EA5A000D81D07 /* Color+Extensions.swift in Sources */,
 				B7B372452B40413900D81D07 /* Memo.swift in Sources */,
 				B7B3720E2B3EA70E00D81D07 /* OnboardingView.swift in Sources */,
+				B75BE4272B529B940072D29F /* TimerViewModel.swift in Sources */,
 				B7B3721D2B3ED78800D81D07 /* MemoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
