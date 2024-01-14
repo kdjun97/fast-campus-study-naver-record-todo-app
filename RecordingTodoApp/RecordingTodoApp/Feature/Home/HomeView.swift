@@ -13,6 +13,7 @@ struct HomeView: View {
     @StateObject private var homeViewModel = HomeViewModel()
     @EnvironmentObject private var todoListViewModel: TodoListViewModel
     @EnvironmentObject private var memoListViewModel: MemoListViewModel
+    @EnvironmentObject private var voiceRecorderViewModel: VoiceRecorderViewModel
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -20,16 +21,21 @@ struct HomeView: View {
                 TodoListView()
                     .environmentObject(pathModel)
                     .environmentObject(todoListViewModel)
+                    .environmentObject(homeViewModel)
                     .tag(Tab.todoList)
                 MemoListView()
                     .environmentObject(pathModel)
                     .environmentObject(memoListViewModel)
+                    .environmentObject(homeViewModel)
                     .tag(Tab.memo)
                 VoiceRecorderView()
+                    .environmentObject(voiceRecorderViewModel)
+                    .environmentObject(homeViewModel)
                     .tag(Tab.voiceRecorder)
                 TimerView()
                     .tag(Tab.timer)
                 SettingView()
+                    .environmentObject(homeViewModel)
                     .tag(Tab.setting)
             }
             CustomTabBar(homeViewModel: homeViewModel)

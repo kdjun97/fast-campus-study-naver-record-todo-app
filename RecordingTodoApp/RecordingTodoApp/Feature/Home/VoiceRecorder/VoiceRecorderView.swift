@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct VoiceRecorderView: View {
-    @StateObject private var voiceRecorderViewModel = VoiceRecorderViewModel()
+    @EnvironmentObject private var voiceRecorderViewModel: VoiceRecorderViewModel
+    @EnvironmentObject private var homeViewModel: HomeViewModel
     
     var body: some View {
         ZStack {
@@ -26,7 +27,14 @@ struct VoiceRecorderView: View {
             RecordingButton(voiceRecorderViewModel: voiceRecorderViewModel)
                 .padding(.trailing, 20)
                 .padding(.bottom, 50)
-        }.alert(
+        }
+        .onChange(
+            of: voiceRecorderViewModel.recordedFiles,
+            perform: { recordedFiles in
+                homeViewModel.voiceRecorderCount = recordedFiles.count
+            }
+        )
+        .alert(
             "선택된 음성메모를 삭제하시겠습니까?",
             isPresented: $voiceRecorderViewModel.isShowRemoveDialog
         ) {

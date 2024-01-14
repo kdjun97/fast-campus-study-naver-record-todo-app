@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct SettingView: View {
+    @EnvironmentObject private var homeViewModel: HomeViewModel
+    
     var body: some View {
         VStack {
             TitleView()
@@ -16,12 +18,12 @@ struct SettingView: View {
             Spacer()
                 .frame(height: 36)
             
-            TotalTabCountView()
+            TotalTabCountView(homeViewModel: homeViewModel)
             
             Spacer()
                 .frame(height: 36)
             
-            TotalTabMoveView()
+            TotalTabMoveView(homeViewModel: homeViewModel)
             
             Spacer()
         }
@@ -43,14 +45,20 @@ private struct TitleView: View {
 }
 
 private struct TotalTabCountView: View {
+    @ObservedObject private var homeViewModel : HomeViewModel
+    
+    fileprivate init(homeViewModel: HomeViewModel) {
+        self.homeViewModel = homeViewModel
+    }
+    
     fileprivate var body: some View {
         HStack {
             Spacer()
-            TabCountView(title: "To do", count: 1)
+            TabCountView(title: "To do", count: homeViewModel.todosCount)
             Spacer()
-            TabCountView(title: "메모", count: 2)
+            TabCountView(title: "메모", count: homeViewModel.memosCount)
             Spacer()
-            TabCountView(title: "음성메모", count: 3)
+            TabCountView(title: "음성메모", count: homeViewModel.voiceRecorderCount)
             Spacer()
         }
     }
@@ -78,6 +86,12 @@ private struct TabCountView: View {
 }
 
 private struct TotalTabMoveView: View {
+    @ObservedObject private var homeViewModel : HomeViewModel
+    
+    fileprivate init(homeViewModel: HomeViewModel) {
+        self.homeViewModel = homeViewModel
+    }
+    
     fileprivate var body: some View {
         VStack {
             Rectangle()
@@ -85,19 +99,19 @@ private struct TotalTabMoveView: View {
                 .frame(height: 1)
             
             TabMoveView(title: "To do List", tabAction: {
-                
+                homeViewModel.selectedTab = .todoList
             })
             
             TabMoveView(title: "메모장", tabAction: {
-                
+                homeViewModel.selectedTab = .memo
             })
             
             TabMoveView(title: "음성메모", tabAction: {
-                
+                homeViewModel.selectedTab = .voiceRecorder
             })
             
             TabMoveView(title: "타이머", tabAction: {
-                
+                homeViewModel.selectedTab = .timer
             })
         }
     }
