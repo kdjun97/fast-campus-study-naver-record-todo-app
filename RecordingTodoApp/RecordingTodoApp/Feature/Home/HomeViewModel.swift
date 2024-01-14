@@ -11,7 +11,7 @@ class HomeViewModel: ObservableObject {
     @Published var selectedTab: Tab
     @Published var todosCount: Int
     @Published var memosCount: Int
-    @Published var voiceRecorder: Int
+    @Published var voiceRecorderCount: Int
     
     init(
         selectedTab: Tab = .voiceRecorder,
@@ -22,6 +22,6 @@ class HomeViewModel: ObservableObject {
         self.selectedTab = selectedTab
         self.todosCount = todosCount
         self.memosCount = memosCount
-        self.voiceRecorder = voiceRecorder
+        self.voiceRecorderCount = voiceRecorder
     }
 }

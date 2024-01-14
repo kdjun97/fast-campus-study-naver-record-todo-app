@@ -11,6 +11,7 @@ import SwiftUI
 struct TodoListView: View {
     @EnvironmentObject private var pathModel: PathModel
     @EnvironmentObject private var todoListViewModel: TodoListViewModel
+    @EnvironmentObject private var homeViewModel: HomeViewModel
     
     var body: some View {
         ZStack {
@@ -38,7 +39,14 @@ struct TodoListView: View {
             WirteTodoButtonView()
                 .padding(.trailing, 20)
                 .padding(.bottom, 50)
-        }.alert(
+        }
+        .onChange(
+            of: todoListViewModel.todos,
+            perform: { todos in
+                homeViewModel.todosCount = todos.count
+            }
+        )
+        .alert(
             "To do list \(todoListViewModel.removeTodosCount)개 삭제하시겠습니까?",
             isPresented: $todoListViewModel.isPresentedDialog
         ) {

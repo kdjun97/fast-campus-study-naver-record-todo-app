@@ -11,6 +11,7 @@ import SwiftUI
 struct MemoListView: View {
     @EnvironmentObject private var memoListViewModel: MemoListViewModel
     @EnvironmentObject private var pathModel: PathModel
+    @EnvironmentObject private var homeViewModel: HomeViewModel
 
     var body: some View {
         ZStack {
@@ -37,7 +38,14 @@ struct MemoListView: View {
             WirteMemoButtonView()
             .padding(.trailing, 20)
             .padding(.bottom, 50)
-        }.alert(
+        }
+        .onChange(
+            of: memoListViewModel.memoList,
+            perform: { memoList in
+                homeViewModel.memosCount = memoList.count
+            }
+        )
+        .alert(
             "메모 \(memoListViewModel.removeMemoList.count)개 삭제하시겠습니까?",
             isPresented: $memoListViewModel.isPresentedDialog
         ) {
