@@ -10,7 +10,57 @@ import SwiftUI
 
 struct OnboardingView: View {
     @StateObject private var onBoardingViewModel = OnboardingViewModel()
-    @State private var selectedIndex: Int = 0
+    @StateObject private var pathModel = PathModel()
+    @StateObject private var todoListViewModel = TodoListViewModel()
+    @StateObject private var memoListViewModel = MemoListViewModel()
+    @StateObject private var voiceRecorderViewModel = VoiceRecorderViewModel()
+
+    var body: some View {
+        NavigationStack(path: $pathModel.paths) {
+            OnboardingContentView(onBoardingViewModel: onBoardingViewModel)
+                .navigationDestination(
+                    for: PathType.self,
+                    destination: { pathType in
+                        switch(pathType) {
+                        case .homeView:
+                            HomeView()
+                                .navigationBarBackButtonHidden(true)
+                                .environmentObject(todoListViewModel)
+                                .environmentObject(memoListViewModel)
+                                .environmentObject(voiceRecorderViewModel)
+                        case .todoView:
+                            TodoView()
+                                .navigationBarBackButtonHidden(true)
+                                .environmentObject(todoListViewModel)
+                        case let .memoView(memo, type):
+                            MemoView(
+                                memoViewModel: .init(
+                                    memo: .init(
+                                        title: memo?.title ?? "",
+                                        content: memo?.content ?? "",
+                                        date: memo?.date ?? Date(),
+                                        id: memo?.id ?? UUID()
+                                    )
+                                ),
+                                isCreatedType: type
+                            )
+                                .navigationBarBackButtonHidden(true)
+                                .environmentObject(memoListViewModel)
+                        }
+                    }
+                )
+        }.environmentObject(pathModel)
+    }
+}
+
+fileprivate struct OnboardingContentView: View {
+    @ObservedObject private var onBoardingViewModel: OnboardingViewModel
+    @State private var selectedIndex: Int
+    
+    init(onBoardingViewModel: OnboardingViewModel, selectedIndex: Int = 0) {
+        self.onBoardingViewModel = onBoardingViewModel
+        self.selectedIndex = selectedIndex
+    }
     
     var body: some View {
         VStack {
@@ -64,9 +114,11 @@ fileprivate struct OnboardingCellView: View {
 }
 
 private struct StartButton: View {
+    @EnvironmentObject private var pathModel: PathModel
+    
     var body: some View {
         Button {
-            print("go")
+            pathModel.paths.append(.homeView)
         } label: {
             HStack(spacing: 0) {
                 Text("시작하기")
