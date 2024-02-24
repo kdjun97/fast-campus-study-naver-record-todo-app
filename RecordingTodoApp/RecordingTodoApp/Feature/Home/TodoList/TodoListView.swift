@@ -36,9 +36,6 @@ struct TodoListView: View {
                         .padding(.bottom, 12)
                 }
             }
-            WirteTodoButtonView()
-                .padding(.trailing, 20)
-                .padding(.bottom, 50)
         }
         .onChange(
             of: todoListViewModel.todos,
@@ -54,6 +51,9 @@ struct TodoListView: View {
                 todoListViewModel.removeButtonTapped()
             }
             Button("취소", role: .cancel) {}
+        }
+        .writeBtn {
+            pathModel.paths.append(.todoView)
         }
     }
 }
@@ -180,25 +180,6 @@ private struct TodoCellItem: View {
         Rectangle()
             .fill(.customGray0)
             .frame(height: 1)
-    }
-}
-
-private struct WirteTodoButtonView: View {
-    @EnvironmentObject private var pathModel: PathModel
-    
-    fileprivate var body: some View {
-        VStack {
-            Spacer()
-            
-            HStack {
-                Spacer()
-                Button{
-                    pathModel.paths.append(.todoView)
-                } label: {
-                    Image("writeButton")
-                }
-            }
-        }
     }
 }
 
