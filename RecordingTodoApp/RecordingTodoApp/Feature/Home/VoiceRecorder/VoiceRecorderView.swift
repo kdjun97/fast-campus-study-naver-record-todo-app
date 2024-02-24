@@ -255,9 +255,11 @@ private struct ProgressBar: View {
 
 private struct RecordingButton: View {
     @ObservedObject private var voiceRecorderViewModel: VoiceRecorderViewModel
+    @State private var isAnimation: Bool
     
-    init(voiceRecorderViewModel: VoiceRecorderViewModel) {
+    fileprivate init(voiceRecorderViewModel: VoiceRecorderViewModel, isAnimation: Bool = false) {
         self.voiceRecorderViewModel = voiceRecorderViewModel
+        self.isAnimation = isAnimation
     }
     
     fileprivate var body: some View {
@@ -268,9 +270,19 @@ private struct RecordingButton: View {
                 Button {
                     voiceRecorderViewModel.recordButtonTapped()
                 } label: {
-                    (voiceRecorderViewModel.isRecording)
-                    ? Image("mic_recording")
-                    : Image("mic")
+                    if (voiceRecorderViewModel.isRecording) {
+                        Image("mic_recording")
+                            .scaleEffect(isAnimation ? 1.5 : 1)
+                            .onAppear {
+                                withAnimation(.spring().repeatForever()) {
+                                    isAnimation.toggle()
+                                }
+                            }.onDisappear {
+                                isAnimation = false
+                            }
+                    } else {
+                        Image("mic")
+                    }
                 }
             }
         }
